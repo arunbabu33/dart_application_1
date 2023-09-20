@@ -87,4 +87,7 @@ void main() {
   stdout.writeln("name : $name");
   stdout.writeln("age : $age");
   stdout.writeln("cgpa :$cgpa");
+
+  // stdout.write() = print all the values  in same line
+  // stdout.writeln() = print all the values in different  line \new line
 }
