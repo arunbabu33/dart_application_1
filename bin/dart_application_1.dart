@@ -74,20 +74,26 @@
 //   obj.abc();
 // }
 
-import 'dart:io';
+// import 'dart:io';
+
+// void main() {
+//   print("enter your name");
+//   String? name = (stdin.readLineSync)();
+//   print("enter your age");
+//   int age = int.parse(stdin.readLineSync()!);
+//   print("enter your cgpa");
+//   double cgpa = double.parse(stdin.readLineSync()!);
+
+//   stdout.writeln("name : $name");
+//   stdout.writeln("age : $age");
+//   stdout.writeln("cgpa :$cgpa");
+
+// stdout.write() = print all the values  in same line
+// stdout.writeln() = print all the values in different  line \new line
+// }
+// )
 
 void main() {
-  print("enter your name");
-  String? name = (stdin.readLineSync)();
-  print("enter your age");
-  int age = int.parse(stdin.readLineSync()!);
-  print("enter your cgpa");
-  double cgpa = double.parse(stdin.readLineSync()!);
-
-  stdout.writeln("name : $name");
-  stdout.writeln("age : $age");
-  stdout.writeln("cgpa :$cgpa");
-
-  // stdout.write() = print all the values  in same line
-  // stdout.writeln() = print all the values in different  line \new line
+  int value = 22;
+  print(value);
 }
