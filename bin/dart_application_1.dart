@@ -318,7 +318,7 @@
 // to print even numbers using for loop and if else
 
 // void main() {
-//   for (int a = 1; a <= 20; a++) {
+//   for (int a = 1; a <= 10; a++) {
 //     if (a % 2 == 0) {
 //       print(a);
 //     }
@@ -328,14 +328,14 @@
 // to print odd nummbers
 
 // void main() {
-//   for (int a = 1; a <= 20; a++) {
+//   for (int a = 1; a <= 10; a++) {
 //     if (a % 2 == 1) {
 //       print(a);
 //     }
 //   }
 // }
 
-// sum of two natural numbers
+// sum of ten natural numbers
 // void main() {
 //   int sum = 0;
 //   for (int i = 1; i <= 10; i++) {
@@ -350,6 +350,7 @@
 //   for (int a = 1; a < 10; a++) {
 //     if (a % 2 == 1) {
 //       sum += a;
+
 //     }
 //   }
 //   print(sum);
@@ -364,13 +365,98 @@
 
 //  multiplication table
 
-import 'dart:io';
+// import 'dart:io';
 
+// void main() {
+//   print("enter your value : ");
+//   int num = int.parse(stdin.readLineSync()!);
+
+//   for (int i = 1; i <= 10; ++i) {
+//     print("$num*$i = ${num * i}");
+//   }
+// }
+
+// sep 26 jump statements
+
+// two types
+// break
+// continue
+// return
+
+// void main() {
+//   for (int i = 1; i <= 100; i++) {
+//     if (i == 51) {
+//       break;
+//     }
+//     print(i);
+//   }
+// }
+
+// continue
+
+// void main() {
+//   for (int i = 1; i <= 100; i++) {
+//     if (i % 5 != 0) {
+//       continue;
+//     }
+//     print(i);
+//   }
+// }
+
+// list set map
+
+// list
+// void main() {
+//   var numbers = [1, 1, 1, 2, 2, 2, 2];
+//   print(numbers);
+//   // print(numbers[3]);
+//   // print(numbers.length);
+//   numbers.add(1212);
+//   numbers.insert(2, 100);
+// }
+
+// lists
+// void main() {
+//   var list1 = [1, 26, 3, 4, 5, 6, 7];
+//   print(list1);
+//   print(list1[3]);
+//   print(list1.length);
+//   list1.add(1212);
+//   print(list1);
+//   list1.insert(2, 100);
+//   print(list1);
+//   list1.replaceRange(1, 2, [100, 200, 3000]);
+//   print(list1);
+
+//   for (var index = 0; index < list1.length; index++) {
+//     print(list1[index]);
+//   }
+
+//   for (var i in list1) {
+//     print(i);
+//   }
+
+//   list1.forEach((element) {
+//     print(element);
+//   });
+// }
+
+// sets- unordered collection
+// does not support duplecate values
 void main() {
-  print("enter your value : ");
-  int num = int.parse(stdin.readLineSync()!);
-
-  for (int i = 1; i <= 10; ++i) {
-    print("$num*$i = ${num * i}");
+  var set1 = {1, 2, 3, 4, 5, "arun"};
+  print(set1);
+  var set2 = {10, 20, 30, 40, 1};
+  print(set2);
+  set1.add(100);
+  print(set1);
+  print(set1.elementAt(2));
+  for (int index = 0; index < set1.length; index++) {
+    print(set1.elementAt(index));
   }
+
+  print(set1.union(set2));
+
+  print(set1.intersection(set2));
+  print(set1.difference(set2));
 }
