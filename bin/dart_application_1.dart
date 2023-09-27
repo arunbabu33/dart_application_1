@@ -443,20 +443,151 @@
 
 // sets- unordered collection
 // does not support duplecate values
+// void main() {
+//   var set1 = {1, 2, 3, 4, 5, "arun"};
+//   print(set1);
+//   var set2 = {10, 20, 30, 40, 1};
+//   print(set2);
+//   set1.add(100);
+//   print(set1);
+//   print(set1.elementAt(2));
+//   for (int index = 0; index < set1.length; index++) {
+//     print(set1.elementAt(index));
+//   }
+
+//   print(set1.union(set2));
+
+//   print(set1.intersection(set2));
+//   print(set1.difference(set2));
+// }
+
+// sep 27
+// map- store values as key value pairs keys must be unique values can be same or different
+// map<key><values>
+
+// void main() {
+//   var set2 = {'name': 'arun', 'age': "21", 'phone': '6282875033'};
+//   print(set2);
+//   set2.addAll({'email': 'arun628287@gmail.com'});
+//   print(set2);
+//   set2['pincode'] = '679511';
+//   print(set2);
+//   set2['age'] = '30';
+//   print(set2);
+//   set2.forEach((key, value) {
+//     print(value);
+//   });
+
+//   print(set2.containsKey('hello'));
+//   print(set2.containsValue('30'));
+
+// }
+
+// program 1
+// void main() {
+//   List<int> list = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+//   print(list);
+//   var sum = 0;
+//   for (int i in list) {
+//     sum += i;
+//   }
+//   print(sum);
+// }
+
+// List<int> list = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+// var sum = 0;
+// for (int i in list) {
+//   if (i % 2 == 0) {
+//     sum += i;
+//     print(i);
+//   }
+// }
+
+// print(sum);
+
+// program 3
 void main() {
-  var set1 = {1, 2, 3, 4, 5, "arun"};
-  print(set1);
-  var set2 = {10, 20, 30, 40, 1};
-  print(set2);
-  set1.add(100);
-  print(set1);
-  print(set1.elementAt(2));
-  for (int index = 0; index < set1.length; index++) {
-    print(set1.elementAt(index));
+  List<int> myList = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+  int positivenumbers = 0;
+  int negativenumbers = 0;
+  int zeros = 0;
+
+  for (int i in myList) {
+    if (i > 0) {
+      positivenumbers++;
+    } else if (i < 0) {
+      negativenumbers++;
+    } else {
+      zeros++;
+    }
   }
+  print(negativenumbers);
+  print(positivenumbers);
+  print(zeros);
 
-  print(set1.union(set2));
-
-  print(set1.intersection(set2));
-  print(set1.difference(set2));
+  int largestnumber = myList[0];
 }
+
+// void main() {
+//   List<int> numbers = [12, 34, 56, 78, 90, 45, 23];
+//   int largestnumbers = numbers[0];
+//   for (int i = 0; i < numbers.length; i++) {
+//     if (numbers[i] > largestnumbers) {
+//       largestnumbers = numbers[i];
+//     }
+//     print("List");
+//   }
+// }
+
+// Main function
+
+// program 4
+// void main() {
+//   List<int> myList = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+//   int a = 1;
+//   for (int i = 1; i < myList.length; i++) {
+//     if (myList[i] > a) {
+//       a = myList[i];
+//     }
+//   }
+//   print(a);
+// }
+
+// prpgram 5
+
+// void main() {
+//   List<int> myList = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+
+//   for (int i = 1; i < myList.length; i++) {
+//     if (myList[i] % 2 == 0) {
+//       print(myList[i]);
+//     }
+//   }
+// }
+
+// void main() {
+//   List<int> list = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+//   var sum = 0;
+//   for (int i in list) {
+//     if (i % 2 == 0) {
+//       sum += i;
+//       print(i);
+//     }
+//   }
+
+//   print(sum);
+// }
+
+
+// prgrm1
+// void main() {
+//   List<int> list = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+//   var sum = 0;
+//   for (int i in list) {
+//     if (i % 2 == 0) {
+//       sum += i;
+//       // print(i);
+//     }
+//   }
+//   print(sum);
+// }
