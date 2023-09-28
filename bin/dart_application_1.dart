@@ -505,28 +505,28 @@
 
 // print(sum);
 
-// program 3
-void main() {
-  List<int> myList = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
-  int positivenumbers = 0;
-  int negativenumbers = 0;
-  int zeros = 0;
+// // program 3
+// void main() {
+//   List<int> myList = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
+//   int positivenumbers = 0;
+//   int negativenumbers = 0;
+//   int zeros = 0;
 
-  for (int i in myList) {
-    if (i > 0) {
-      positivenumbers++;
-    } else if (i < 0) {
-      negativenumbers++;
-    } else {
-      zeros++;
-    }
-  }
-  print(negativenumbers);
-  print(positivenumbers);
-  print(zeros);
+//   for (int i in myList) {
+//     if (i > 0) {
+//       positivenumbers++;
+//     } else if (i < 0) {
+//       negativenumbers++;
+//     } else {
+//       zeros++;
+//     }
+//   }
+//   print(negativenumbers);
+//   print(positivenumbers);
+//   print(zeros);
 
-  int largestnumber = myList[0];
-}
+// int largestnumber = myList[0];
+// }
 
 // void main() {
 //   List<int> numbers = [12, 34, 56, 78, 90, 45, 23];
@@ -578,7 +578,6 @@ void main() {
 //   print(sum);
 // }
 
-
 // prgrm1
 // void main() {
 //   List<int> list = [1, -3, 7, 9, 0, -6, 4, -2, 0, 10, -8, 5];
@@ -591,3 +590,117 @@ void main() {
 //   }
 //   print(sum);
 // }
+
+import 'dart:io';
+
+// void main() {
+//   print("enter the value:");
+//   int value = int.parse(stdin.readLineSync()!);
+
+//   dynamic list = [1, 3, 7, 9, 0, -6, 4, -2, 10, -8, 5];
+//   var found = false;
+//   for (int i = 0; i <= list.length; i++) {
+//     if (value == list[i]) {
+//       found = true;
+//       break;
+//     }
+//   }
+//   if (found) {
+//     print("the value is present");
+//   } else {
+//     print("the value is not present");
+//   }
+// }
+
+// sep 28 functions
+
+// main function
+// userdefined function
+// built in function
+// lambda function
+// anonymous function
+
+// sub categories of all the above function
+
+// deafult function(with or without return type)
+// parameterised function(with or without return type)
+
+// ********
+// categories of parameterised function
+// 1. optional positional
+// 2.optional named
+// 3.optional named with default value
+
+// functions in dart
+
+// void main() {
+//   function1();
+// }
+
+// // userdefined function without return type without parameter
+// // user defined default function without returntype
+
+// void function1() {
+//   print("default function");
+// }
+
+// userdefined default function with return type(it can be int,string,bool,double,etc.....)
+
+// void main() {
+//   print(function2());
+// }
+
+// String function2() {
+//   String ab = 'arun';
+//   int a = 21;
+//   return "$a,$ab";
+// }
+
+// userdefined parameterised function without return type
+
+// void main() {
+//   function3(20, 100);
+// }
+
+// void function3(inta, int b) {
+//   int sum = inta + b;
+//   print(sum);
+// }
+
+// userdefined parameterised function with return type
+// void main() {
+//   function4(10, "arun", 22.99);
+// }
+
+// int function4(int a, String b, double c) {
+//   print('value of a=$a b=$b c=$c');
+//   return 0;
+// }
+
+// void main() {
+//   mydetails1("arun", 21, 50, 6282875033);
+// }
+
+// void mydetails1(String name, int age, double mark, int phone) {
+//   print("name=$name,age=$age,mark=$mark,$phone");
+
+// }
+
+// lambda function without parameter * arrow function *
+
+void main() {
+  func5();
+  func6(10, 20);
+  func7(5, 5);
+  func8("arun", "arun628287@gmail.com", 21, 99);
+}
+
+void func5() => print("hello");
+void func6(int a, int b) => print("sum=${a + b}");
+void func7(int a, int b) => print(a * b);
+void func8(String name, String email, int age, double marks) {
+  print("name=$name");
+  print("email=$email");
+  print("age=$age");
+  print("marks=$marks");
+}
