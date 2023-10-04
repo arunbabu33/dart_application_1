@@ -688,19 +688,66 @@ import 'dart:io';
 
 // lambda function without parameter * arrow function *
 
-void main() {
-  func5();
-  func6(10, 20);
-  func7(5, 5);
-  func8("arun", "arun628287@gmail.com", 21, 99);
-}
+// void main() {
+//   func5();
+//   func6(10, 20);
+//   func7(5, 5);
+//   func8("arun", "arun628287@gmail.com", 21, 99);
+// }
 
-void func5() => print("hello");
-void func6(int a, int b) => print("sum=${a + b}");
-void func7(int a, int b) => print(a * b);
-void func8(String name, String email, int age, double marks) {
-  print("name=$name");
-  print("email=$email");
-  print("age=$age");
-  print("marks=$marks");
+// void func5() => print("hello");
+// void func6(int a, int b) => print("sum=${a + b}");
+// void func7(int a, int b) => print(a * b);
+// void func8(String name, String email, int age, double marks) {
+//   print("name=$name");
+//   print("email=$email");
+//   print("age=$age");
+//   print("marks=$marks");
+// }
+
+// oct 4   constructor //
+// 1. similar to functions used to initialize the object
+//  2. does not have return type
+// 3. name must be similar to class name
+// 4. we cant use default and parameterised constructor together in a class, so we mainly used named constructors or combination of default and named or combination of named and parametrised...
+//  5. if we donot mention constructorin a class it will automatically generate a default constructor
+// eg: 3types: default, parameterised, named
+
+// class A {
+//   A() {
+//     print("default constructor");
+//   }
+
+//   A.name1() {
+//     print("default named constructor");
+//   }
+
+//   A.name2(int a, int b) {
+//     print("default named constructor 2");
+//   }
+//   A.a2({String? name, int? age, int? year}) {
+//     print("name=$name");
+//     print("age=$age");
+//     print("year=$year");
+//   }
+// }
+
+// void main() {
+//   A obj1 = A.name1();
+//   A.name2(1, 2);
+
+// }
+
+void main() {
+  var list1 = List.empty(growable: true);
+  var list2 = [];
+  print('list1=$list1');
+  list1.add(10);
+  list1.addAll({20, 32, 300, 400});
+
+  var list3 = List.from(list1);
+  list3.addAll([1, 2, 3, 4, 5]);
+  print('list1=$list1');
+  print('list2 =$list2');
+  print('list3=$list3');
 }
