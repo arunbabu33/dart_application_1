@@ -738,16 +738,77 @@ import 'dart:io';
 
 // }
 
-void main() {
-  var list1 = List.empty(growable: true);
-  var list2 = [];
-  print('list1=$list1');
-  list1.add(10);
-  list1.addAll({20, 32, 300, 400});
+// void main() {
+//   var list1 = List.empty(growable: true);
+//   var list2 = [];
+//   print('list1=$list1');
+//   list1.add(10);
+//   list1.addAll({20, 32, 300, 400});
 
-  var list3 = List.from(list1);
-  list3.addAll([1, 2, 3, 4, 5]);
-  print('list1=$list1');
-  print('list2 =$list2');
-  print('list3=$list3');
+//   var list3 = List.from(list1);
+//   list3.addAll([1, 2, 3, 4, 5]);
+
+//   var list4 = List.empty(growable: true);
+//   list4 = List.filled(11, 2);
+//   list4.add(50);
+
+//   print('list1=$list1');
+//   print('list2 =$list2');
+//   print('list3=$list3');
+
+//   print('list4=$list4');
+//   list4[3] = 5;
+//   list4[5] = 6;
+//   print(list4);
+
+//   var list5 = List.generate(10, (index) => 5 * index);
+// }
+
+// october 5
+
+// set
+
+// void mmain() {
+//   Set s1 = {};
+//   Set s2 = Set();
+//   Set s3 = Set.of({1, 2, 3, 4, 5, 6});
+//   print('s1=$s1');
+//   print('s2=$s2');
+//   print('s3=$s3');
+// }
+
+// void main() {
+//   Set s1 = {};
+//   Set s2 = {};
+//   Set s3 = Set.of({1, 2, 3, 4, 5, 6});
+//   Set s4 = Set.from({10, 20, 30, 40});
+//   Set s5 = Set.unmodifiable(s4);
+//   Set s6 = Set.identity();
+//   print('s1=$s1');
+//   print('s2=$s2');
+//   print('s3=$s3');
+//   print(s4);
+//   print(s5);
+//   print(s6);
+// }
+
+// map
+
+void main() {
+  var l1 = [1, 2, 3, 4.5];
+  var s1 = [10, 20, 30, 40.50];
+  var map1 = {};
+  var map2 = Map();
+  map1['key 1'] = ['value 1'];
+  map2['key 2'] = ['value 2'];
+  var map3 = Map.fromEntries(map2.entries);
+  map3['key 3'] = ['value 3'];
+  Map m4 = Map.fromIterable(l1);
+  Map m5 = Map.fromIterables(l1, s1);
+
+  print(map2);
+  print(map1);
+  print(map3);
+  print(m4);
+  print(m5);
 }
