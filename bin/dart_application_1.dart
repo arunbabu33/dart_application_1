@@ -794,21 +794,125 @@ import 'dart:io';
 
 // map
 
-void main() {
-  var l1 = [1, 2, 3, 4.5];
-  var s1 = [10, 20, 30, 40.50];
-  var map1 = {};
-  var map2 = Map();
-  map1['key 1'] = ['value 1'];
-  map2['key 2'] = ['value 2'];
-  var map3 = Map.fromEntries(map2.entries);
-  map3['key 3'] = ['value 3'];
-  Map m4 = Map.fromIterable(l1);
-  Map m5 = Map.fromIterables(l1, s1);
+// void main() {
+//   var l1 = [1, 2, 3, 4.5];
+//   var s1 = [10, 20, 30, 40.50];
+//   var map1 = {};
+//   var map2 = Map();
+//   map1['key 1'] = ['value 1'];
+//   map2['key 2'] = ['value 2'];
+//   var map3 = Map.fromEntries(map2.entries);
+//   map3['key 3'] = ['value 3'];
+//   Map m4 = Map.fromIterable(l1);
+//   Map m5 = Map.fromIterables(l1, s1);
 
-  print(map2);
-  print(map1);
-  print(map3);
-  print(m4);
-  print(m5);
+//   print(map2);
+//   print(map1);
+//   print(map3);
+//   print(m4);
+//   print(m5);
+// }
+
+// october 6
+// oops concept
+// 1. class
+// 2.object
+// 3. inheritance
+// ..single
+// .. multilevel
+// .. hierarchical
+// .. multiple(this is achieved by implements keyword or interface)
+
+// 4. polymorphism
+// 5. abstraction
+// 6. encapsulation
+
+// void main() {
+
+// }
+// single inheritance
+
+// class a {
+//   String name = "arun";
+//   int year = 2023;
+
+//   void func() {
+//     print("inside a method from class a");
+//   }
+// }
+
+// class B extends a {
+//   double time = 11.25;
+//   String place = "palakkad";
+
+//   void method1() {
+//     print("$name inside a method from class b");
+//   }
+// }
+
+// void main() {
+//   B obj = B();
+
+//   obj.method1();
+//   obj.func();
+// }
+
+// multi level inheritance
+
+// class Cars {
+//   String name1 = "toyota";
+//   int model1 = 2020;
+//   void funct1() {
+//     print("car 1 $name1");
+//     print("car 1 $model1");
+//   }
+// }
+
+// class Car2 extends Cars {
+//   String name2 = "supra";
+//   int model2 = 2019;
+//   void funct2() {
+//     print("car 2 $name2");
+//     print("car 2 $model2");
+//   }
+// }
+
+// class Car3 extends Car2 {
+//   String name3 = "etios";
+//   int model3 = 2022;
+//   void funct3() {
+//     print("car 3 $name3");
+//     print("car 3 $model3");
+//   }
+// }
+
+// void main() {
+//   Car3 details = Car3();
+//   details.funct1();
+//   details.funct2();
+//   details.funct3();
+// }
+
+//  hierarchical
+
+class Phone {
+  void details(String name, int model) {
+    print("name = $name");
+    print("model =$model");
+  }
+}
+
+class Samsung extends Phone {
+  String name = "samsung s22";
+}
+
+class Realme extends Phone {
+  String name = "realme ten pro plus";
+}
+
+void main() {
+  Samsung obj = Samsung();
+  obj.details("samsung s22", 2019);
+  Realme obj1 = Realme();
+  obj1.details("realme ten pro plus", 2023);
 }
