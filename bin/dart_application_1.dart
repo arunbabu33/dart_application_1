@@ -591,7 +591,7 @@
 //   print(sum);
 // }
 
-import 'dart:io';
+// import 'dart:io';
 
 // void main() {
 //   print("enter the value:");
@@ -895,24 +895,114 @@ import 'dart:io';
 
 //  hierarchical
 
-class Phone {
-  void details(String name, int model) {
-    print("name = $name");
-    print("model =$model");
+// class Phone {
+//   void details(String name, int model) {
+//     print("name = $name");
+//     print("model =$model");
+//   }
+// }
+
+// class Samsung extends Phone {
+//   String name = "samsung s22";
+// }
+
+// class Realme extends Phone {
+//   String name = "realme ten pro plus";
+// }
+
+// void main() {
+//   Samsung obj = Samsung();
+//   obj.details("samsung s22", 2019);
+//   Realme obj1 = Realme();
+//   obj1.details("realme ten pro plus", 2023);
+// }
+
+// oct 9
+// polymorphism
+
+// class A {
+//   void display(int a) {
+//     print("arun");
+//   }
+
+//   void show() {}
+// }
+
+// class Child extends A {
+//   @override
+//   void display(int x) {
+//     int a = 100, b = 200;
+//     print("sum=${a + b}");
+//     super.display(1000);
+//   }
+
+//   int add(int a, int b) {
+//     return a + b;
+//   }
+// }
+
+//;
+// } void main() {
+//   Child obj = Child();
+//   obj.display(1000);
+//   obj.add(100, 200);
+//   obj.show();
+
+// *****************************//
+
+// class Phone {
+//   void details(String name, int model) {
+//     print("name = $name");
+//     print("model =$model");
+//   }
+// }
+
+// class Samsung extends Phone {
+//   String name = "samsung s22";
+//   @override
+//   void details(String name, int model) {
+//     super.details("samsung s22", 2023);
+//   }
+// }
+
+// class Realme extends Phone {
+//   String name = "realme ten pro plus";
+//   @override
+//   void details(String name, int model) {
+//     super.details("realme ten pro plus", 1998);
+//   }
+// }
+
+// void main() {
+//   Samsung obj = Samsung();
+//   obj.details("samsung s22", 2019);
+//   Realme obj1 = Realme();
+//   obj1.details("realme ten pro plus", 2023);
+// }
+
+// ******************************************//
+
+// super constructor/
+
+class X {
+  X(String a) {
+    print("default constructor of class x");
   }
 }
 
-class Samsung extends Phone {
-  String name = "samsung s22";
-}
-
-class Realme extends Phone {
-  String name = "realme ten pro plus";
+class Childx extends X {
+  Childx() : super("arun") {
+    print("default constructor of class childx");
+  }
 }
 
 void main() {
-  Samsung obj = Samsung();
-  obj.details("samsung s22", 2019);
-  Realme obj1 = Realme();
-  obj1.details("realme ten pro plus", 2023);
+  Childx obj = Childx();
 }
+
+// 
+// parent class constructor will starts executes with
+// child class consteructor 
+
+// every parent class constructor except default me must use 
+// super constructor invocation with child class constructor
