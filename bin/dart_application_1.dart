@@ -984,25 +984,230 @@
 
 // super constructor/
 
-class X {
-  X(String a) {
-    print("default constructor of class x");
-  }
+// class X {
+//   X(String a) {
+//     print("default constructor of class x");
+//   }
+// }
+
+// class Childx extends X {
+//   Childx() : super("arun") {
+//     print("default constructor of class childx");
+//   }
+// }
+
+// void main() {
+//   Childx obj = Childx();
+// }
+
+//
+// parent class constructor will starts executes with
+// child class consteructor
+
+// every parent class constructor except default me must use
+// super constructor invocation with child class constructor
+
+// oct 10
+
+// this keyword
+//  used when the instance variables and function arguments jhave same name
+// class Demo {
+//   String? name;
+//   int? year;
+//   // Demo(String s, int a) {
+//   //   //s and a are nirmal parameters
+//   //   name = s;
+//   //   year = a;
+//   // }
+//   Demo(String this.name, int this.year);
+//   void show() {
+//     print("s: $name");
+//     print("a: $year");
+//   }
+// }
+
+// void main() {
+//   Demo obj = Demo("arun", 21);
+//   obj.show();
+// }
+
+// *******************************
+
+// abstract class A1 {
+//   int a = 10;
+//   int b = 20;
+//   void show() {
+//     print("sum=${a + b}");
+//   }
+
+//   void display();
+// }
+
+// class ChildX extends A1 {
+//   @override
+//   void display() {}
+// }
+
+// void main() {
+//   // ignore: unused_local_variable
+//   A1 obj = A1();
+//   obj.display();
+// }
+
+// *********************************
+
+// import 'dart:html';
+
+// class A2 {
+//   int a = 10, b = 20;
+
+//   void show() {
+//     print("inside show method from A1");
+//   }
+
+//   void display() {
+//     print("inside display method from A1");
+//   }
+// }
+
+// class Child extends A2 {}
+
+// class Child2 implements A2 {
+//   @override
+//   int a = 100;
+
+//   @override
+//   int b = 200;
+
+//   @override
+//   void display() {
+//     // TODO: implement display
+//     print("arun");
+//   }
+
+//   @override
+//   void show() {
+//     // TODO: implement show
+//     print("v");
+//   }
+// }
+
+// void main() {
+//   Child2 obj = Child2();
+//   obj.display();
+//   obj.show();
+//   print("${obj.a}");
+//   print("${obj.b}");
+// }
+
+// octo 11
+
+// abstract class Father {
+//   void fdetails(String name, String job, int phone);
+//   // print("father details");
+//   // print('name :$name');
+//   // print("job : $job");
+//   // print("phone : $phone");
+// }
+
+// abstract class Mother {
+//   void mdetails(String name, String job, int phone);
+//   // print("Mother details");
+//   // print('name :$name');
+//   // print("job : $job");
+//   // print("phone : $phone");
+// }
+
+// class Child implements Father, Mother {
+//   void cdetails(String name, int age, int std) {
+//     print("cdetails details");
+//     print('name :$name');
+//     print("age : $age");
+//     print("std : $std");
+//   }
+
+//   @override
+//   void fdetails(String name, String job, int phone) {
+//     print("father details");
+//     print('name :$name');
+//     print("job : $job");
+//     print("phone : $phone");
+
+//     // print("***************************");
+//   }
+
+//   @override
+//   void mdetails(String name, String job, int phone) {
+//     print("father details");
+//     print('name :$name');
+//     print("job : $job");
+//     print("phone : $phone");
+//   }
+// }
+
+// void main() {
+//   Child obj = Child();
+//   obj.mdetails("bindu", "housewife", 6282875033);
+//   obj.fdetails("babu", "driver", 72627282828);
+//   obj.cdetails("arun", 21, 12);
+// }
+
+// import 'dart:html';
+
+abstract class A {
+  void personaldetails(String name, String email, int phone) {}
 }
 
-class Childx extends X {
-  Childx() : super("arun") {
-    print("default constructor of class childx");
+abstract class B {
+  void schooling(String schoolname, int year, double mark) {}
+}
+
+abstract class C {
+  void graduation(String universityname, int year, double cgpa) {}
+}
+
+class D implements A, B, C {
+  void experience(
+    String yearofexperience,
+    String previouscompany,
+    String reference,
+  ) {
+    print("experirence details");
+    print('yearofexperience :$yearofexperience');
+    print("previouscompany : $previouscompany");
+    print("reference : $reference");
+  }
+
+  @override
+  void personaldetails(String name, String email, int phone) {
+    print("my details");
+    print("name : $name");
+    print("email : $email");
+    print("phone : $phone");
+  }
+
+  @override
+  void schooling(String schoolname, int year, double mark) {
+    print("schooling details");
+    print('schoolname :$schoolname');
+    print("year : $year");
+    print("mark : $mark");
+  }
+
+  @override
+  void graduation(String universityname, int year, double cgpa) {
+    print("graduation");
+    print('universityname :$universityname');
+    print("year : $year");
+    print("cgpa : $cgpa");
   }
 }
 
 void main() {
-  Childx obj = Childx();
+  D obj = D();
+
+  obj.personaldetails("arun", "arun62@gmail.com", 6235367373);
+  obj.schooling("ssso", 2020, 99);
+  obj.graduation("bhararhiyar", 2022, 9.9);
+  obj.experience("2022", "wipro", "friend");
 }
-
-// 
-// parent class constructor will starts executes with
-// child class consteructor 
-
-// every parent class constructor except default me must use 
-// super constructor invocation with child class constructor
